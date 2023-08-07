@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Accordion with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-md mx-auto mt-8 p-4">
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header bg-gray-200 py-2 px-4 w-full text-left rounded-md focus:outline-none">
+          Section 1
+        </button>
+        <div class="accordion-content bg-white p-4 hidden">
+          Content for section 1 goes here.
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header bg-gray-200 py-2 px-4 w-full text-left rounded-md focus:outline-none">
+          Section 2
+        </button>
+        <div class="accordion-content bg-white p-4 hidden">
+          Content for section 2 goes here.
+        </div>
+      </div>
+      
+      <!-- Add more accordion sections as needed -->
+    </div>
+  </div>
+
+  <script>
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('hidden');
+
+        // Close other open accordion sections
+        accordionHeaders.forEach(otherHeader => {
+          if (otherHeader !== header) {
+            otherHeader.nextElementSibling.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Accordion with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="max-w-md mx-auto mt-8 p-4">
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header bg-gray-200 py-2 px-4 w-full text-left rounded-md focus:outline-none">
+          Section 1
+        </button>
+        <div class="accordion-content bg-white p-4 hidden">
+          Content for section 1 goes here.
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header bg-gray-200 py-2 px-4 w-full text-left rounded-md focus:outline-none">
+          Section 2
+        </button>
+        <div class="accordion-content bg-white p-4 hidden">
+          Content for section 2 goes here.
+        </div>
+      </div>
+      
+      <!-- Add more accordion sections as needed -->
+    </div>
+  </div>
+
+  <script>
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('hidden');
+
+        // Close other open accordion sections
+        accordionHeaders.forEach(otherHeader => {
+          if (otherHeader !== header) {
+            otherHeader.nextElementSibling.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
